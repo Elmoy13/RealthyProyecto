@@ -54,4 +54,9 @@ export class DashboardPage implements OnInit {
   goToProfile() {
     this.router.navigateByUrl('/tabs/profile');
   }
+
+  goToPropertyPage(propertyId: number) {
+    this.router.navigate([`/tabs/properties/${propertyId}`]);
+  }
+
 }
