@@ -50,4 +50,8 @@ export class DashboardPage implements OnInit {
       }
     );
   }
+
+  goToProfile() {
+    this.router.navigateByUrl('/tabs/profile');
+  }
 }

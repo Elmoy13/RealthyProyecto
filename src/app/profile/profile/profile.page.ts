@@ -27,19 +27,19 @@ export class ProfilePage implements OnInit {
   ) { }
 
   ngOnInit() {
-    // this.id_user = localStorage.getItem('id_user')
-    // if (this.apiService.isLoggedIn()) {
-    //   this.apiService.getCurrentUser(this.id_user).subscribe(
-    //     (response) => {
-    //       this.user = response.data;
-    //     },
-    //     (error) => {
-    //       console.log(error);
-    //     }
-    //   );
-    // } else {
-    //   this.router.navigate(['/login']);
-    // }
+    this.id_user = localStorage.getItem('id_user')
+    if (this.apiService.isLoggedIn()) {
+      this.apiService.getCurrentUser(this.id_user).subscribe(
+        (response) => {
+          this.user = response.data;
+        },
+        (error) => {
+          console.log(error);
+        }
+      );
+    } else {
+      this.router.navigate(['/login']);
+    }
   }
 
   goBack() {

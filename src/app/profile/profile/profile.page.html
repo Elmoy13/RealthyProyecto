@@ -29,9 +29,9 @@
       <ion-col size="12" class="ion-text-center Specifications">
 
 
-        <img src="../assets/images/Ellipse.png" alt="profile" width="100px" height="100px">
-        <h2>{{nombre}}</h2>
-        <p>{{correo}}</p>
+        <img src="https://www.pngall.com/wp-content/uploads/5/User-Profile-PNG-Clipart.png" alt="profile" width="100px" height="100px">
+        <h2>{{ user?.name }}</h2>
+        <p>{{ user?.email }}</p>
 
       </ion-col>
     </ion-row>
@@ -184,9 +184,14 @@
   </div>
 
 
-  <ion-fab class="boton" vertical="bottom" horizontal="center" slot="fixed">
-    <ion-button class="startChat" color="#8BC83F" expand="block">
-      Start Chat
+    <!-- <div class="centro">
+      <button class="rectangle2" (click)="logout()">Cerrar sesión</button>
+    </div> -->
+
+
+   <ion-fab class="boton" vertical="bottom" horizontal="center" slot="fixed">
+    <ion-button class="startChat" color="#8BC83F" expand="block" (click)="logout()">
+      Cerrar sesión
     </ion-button>
   </ion-fab>
 

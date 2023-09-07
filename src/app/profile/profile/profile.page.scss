@@ -22,7 +22,24 @@ h4{
   font-size: medium;
 }
 
-
+  .rectangle2{
+  position: absolute;
+  width: 278px;
+  height: 63px;
+  top: 470px;
+  background: #8BC83F;
+  border-radius: 10px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 21px;
+  line-height: 19px;
+  text-align: center;
+  }
+  .centro{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 
 ion-segment{
   width: 90vw;
@@ -86,6 +103,9 @@ ion-segment{
   border-radius: 10px;
   background-color: #8BC83F;
   font-size: 20px;
+  font-weight: 700;
+  font-style: normal;
+
 }
 
 .listingsCant{
