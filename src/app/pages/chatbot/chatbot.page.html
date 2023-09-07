@@ -44,6 +44,9 @@
                 <p style="margin-bottom: 15px;text-align: justify;"><span style="margin-left: 6px;"
                     attr.data-is="{{item.create * 1000 | date:'h:mm a'}}" attr.data-text="{{item.name}}"
                     class="b-left-msg" style="background:rgb(169, 169, 169);white-space: pre-line;">{{item.message}}<img style="width: 400px;"[src]="item.img"  *ngIf="false" ></span></p>
+                    <ion-button class="startChat" color="#8BC83F" expand="block"  *ngIf="getBoton(item.message)"  (click)="getIdPropiedad(item.message)">
+                     Mas informacion
+                    </ion-button>
               </div>
   
   

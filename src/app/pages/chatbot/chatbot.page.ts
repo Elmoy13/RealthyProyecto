@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Configuration, OpenAIApi } from "openai";
 import { PropiedadesService } from 'src/app/services/propiedades.service';
 
@@ -55,7 +56,7 @@ export class ChatbotPage implements OnInit {
 
 
   propiedadesArray:any[]=[];
-  constructor(public propApi:PropiedadesService) {
+  constructor(public propApi:PropiedadesService,private router: Router) {
 
   }
 
@@ -105,7 +106,7 @@ export class ChatbotPage implements OnInit {
         - Buscar propiedades en venta o renta en una zona especifica, proporcionando informacion sobre el precio, tamaño etc.
         -Respuesta a preguntas frecuentes puedes proporcionar respuestas automaticas a preguntas frecuentes sobre bienes raices, terminos y condiciones de un contrato, requisitos para obtener una hipoteca etc.
 
-       El siguiente json es un arreglo de objetos de propiedades que podras recomendar en base a lo que pide el usuario.
+       El siguiente json es un arreglo de objetos de propiedades que podras recomendar en base a lo que pide el usuario, si no se encuentran casas en la zona o ubicacion del usuario simplemente responde que no se encuentran casas en este momento.
        ${JSON.stringify(this.propiedadesArray)}
 
       El siguiente texto es un ejemplo de como puede ser tu conversacion.
@@ -113,8 +114,11 @@ export class ChatbotPage implements OnInit {
        Tu: Hola, puedes recomendarme casas en renta en la piedad?
        Bot:Hola! Claro, estaré encantado de ayudarte. Según los datos proporcionados anteriormente, hay una casa en La Piedad que podría interesarte:
 
+       Para mas informacion da click en el siguiente boton.
+
        Dirección: Calle 20 de Noviembre #345
-       Ciudad: La Piedad
+       Ciudad: La Piedad,
+       Id:1
        `
         let msg=this.message;
         this.message="";
@@ -142,6 +146,37 @@ export class ChatbotPage implements OnInit {
 
     }
 
+  }
+
+  getBoton(message:string){
+      if(message.includes('Dirección')){
+        console.log(message)
+        // this.router.navigate(['/forgot-password']);
+        return true;
+      }else{
+        return false;  
+      }
+
+  }
+
+  getIdPropiedad(message:string){
+  
+    const regex = /Id:(\d+)/;
+
+// Ejecutar la expresión regular en el texto
+const match = message.match(regex);
+
+if (match) {
+  // El ID se encuentra en el grupo de captura 1
+  const id = match[1];
+
+  // Guardar el ID en una variable
+  const idVariable = id;
+
+  this.router.navigate(['/tabs/properties/'+idVariable]);
+} else {
+  console.log("ID no encontrado en el texto.");
+}
   }
 
 
