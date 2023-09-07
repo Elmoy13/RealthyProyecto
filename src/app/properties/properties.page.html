@@ -8,7 +8,7 @@
 
         </div>
         <div class="type">
-         Casa
+          {{ propertyDetails.tipo }}
         </div>
         <button class="back-button">
           <ion-icon name="arrow-back"></ion-icon>
@@ -24,9 +24,9 @@
   </ion-slides>
 
 
-  <h1>Casa Comoda</h1>
-  <h2>Patzcuaro michoacan</h2>
-  <h3>6000/Month</h3>
+  <h1>Maravillosa Estancia </h1>
+  <h2>{{ propertyDetails.ciudad }}</h2>
+  <h3>{{ propertyDetails.precioRenta }}/Month</h3>
 
   <div class="container">
     <div class="renta">Renta</div>
@@ -73,11 +73,11 @@
     <!-- Botones del carrusel -->
     <div class="carousel-button">
       <ion-icon name="bed"></ion-icon>
-      Habitaciones 5
+      Habitaciones {{ propertyDetails.habitaciones }}
     </div>
     <div class="carousel-button">
       <ion-icon name="bath"></ion-icon>
-      Baños 2
+      Baños {{ propertyDetails.banos }}
     </div>
     <div class="carousel-button">
       <ion-icon name="bulb"></ion-icon>
@@ -107,8 +107,8 @@
 
       </ion-avatar>
       <ion-label>
-        <h1>Enrrique Ramirez #5</h1>
-        <p>Patzcuaro #5</p>
+        <h1>{{ propertyDetails.direccion }}</h1>
+        <p>{{ propertyDetails.ciudad }}</p>
         <span> </span>
       </ion-label>
     </ion-item>
@@ -124,28 +124,17 @@
   <div class="carousel-container">
     <!-- Botones del carrusel -->
     <div class="carousel-button">
-      <ion-icon name="bed"></ion-icon>
-      Habitaciones 5
+      <ion-icon name="gas-pump"></ion-icon>
+      Gasolineras 5
     </div>
     <div class="carousel-button">
-      <ion-icon name="bath"></ion-icon>
-      Baños 2
+      <ion-icon name="school"></ion-icon>
+      Escuelas 2
     </div>
     <div class="carousel-button">
-      <ion-icon name="bulb"></ion-icon>
-      Luz
+      <ion-icon name="restroom"></ion-icon>
+      Baños publicos 1
     </div>
-    <div class="carousel-button">
-      <ion-icon name="restaurant"></ion-icon>
-      Comedor
-    </div>
-    <div class="carousel-button">
-      <ion-icon name="wifi"></ion-icon>
-      Internet
-    </div>
-    <div class="carousel-button">
-      <ion-icon name="leaf"></ion-icon>
-      Jardin
-    </div>
+
   </div>
 </ion-content>

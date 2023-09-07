@@ -40,38 +40,39 @@
       </div>
       <br>
 
-      <ion-slides class="slides"  pager="false" [options]="slideOpts">
-        <ion-slide>
+      <ion-slides class="slides" pager="false" [options]="slideOpts">
+        <ion-slide (click)="goToPropertyPage(10)">
           <div class="slide">
             <img src="https://img.olx.com.br/thumbs256x256/63/633352365378534.jpg" class="card">
             <h3>Casa en La Piedad</h3>
           </div>
         </ion-slide>
-        <ion-slide>
+        <ion-slide (click)="goToPropertyPage(20)">
           <div class="slide">
             <img src="https://www.construyehogar.com/wp-content/uploads/2016/01/Casa-moderna-un-piso.jpg" class="card">
             <h3>Casa en Patzcuaro</h3>
           </div>
         </ion-slide>
-        <ion-slide>
+        <ion-slide (click)="goToPropertyPage(19)">
           <div class="slide">
             <img src="https://www.construyehogar.com/wp-content/uploads/2017/04/Fachada-casa-moderna-dos-pisos.jpg" class="card">
             <h3>Casa en CDMX</h3>
           </div>
         </ion-slide>
-        <ion-slide>
+        <ion-slide (click)="goToPropertyPage(16)">
           <div class="slide">
             <img src="https://img.olx.com.br/thumbs256x256/63/633352365378534.jpg" class="card">
             <h3>Casa en Morelia</h3>
           </div>
         </ion-slide>
-        <ion-slide>
+        <ion-slide (click)="goToPropertyPage(18)">
           <div class="slide">
             <img src="https://img.olx.com.br/thumbs256x256/63/633352365378534.jpg" class="card">
-            <h3>hola 5</h3>
+            <h3>Casa en Maravatio</h3>
           </div>
         </ion-slide>
       </ion-slides>
+
       <h1>
         Fincas destacadas</h1>
         <ion-slides class="slides"  pager="false" [options]="slideOpts">

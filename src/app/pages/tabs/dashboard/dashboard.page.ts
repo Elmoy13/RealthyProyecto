@@ -50,4 +50,9 @@ export class DashboardPage implements OnInit {
       }
     );
   }
+
+  goToPropertyPage(propertyId: number) {
+    this.router.navigate([`/tabs/properties/${propertyId}`]);
+  }
+
 }

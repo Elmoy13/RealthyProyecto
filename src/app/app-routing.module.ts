@@ -101,6 +101,10 @@ const routes: Routes = [
             path: 'notifications',
             loadChildren: () => import('./pages/notifications/notifications.module').then( m => m.NotificationsPageModule)
           },
+          {
+            path: 'properties',
+            loadChildren: () => import('./properties/properties.module').then( m => m.PropertiesPageModule)
+          },
           // {
           //   path: 'radio',
           //   loadChildren: () => import('./radio/radio-page.module').then((m) => m.RadioPageModule),
@@ -114,7 +118,8 @@ const routes: Routes = [
           //   loadChildren: () => import('./search/search-page.module').then((m) => m.SearchPageModule),
           // },
         ],
-      },  {
+      },
+  {
     path: 'properties',
     loadChildren: () => import('./properties/properties.module').then( m => m.PropertiesPageModule)
   },
